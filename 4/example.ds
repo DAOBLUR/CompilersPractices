@@ -1,0 +1,20 @@
+func Square (a) {
+  return a*a
+}
+
+func main() {
+    Var a2 = 0
+    var b3 = 10.5
+    var cCaA4 = null
+    var BB5 = "abc"
+    var S6 = 'abc'
+    var fA = false
+
+    if a < b & c == null {
+        for i = 0, b, 1 {
+            a += 1
+        } 
+    }   
+
+    Square(a)
+}

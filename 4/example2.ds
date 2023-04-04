@@ -1,0 +1,13 @@
+func main() {
+    print(1)
+    var a = read(2)
+    var 1MiIdentificador = 10
+    var mi_segun1do_identificador = 20
+    var a1 = true
+    var 1en1tero = 123
+    var 1flotante = 1.23
+    var b3ooleano = true
+    var 1nu2lo = null
+
+    return 0
+}
