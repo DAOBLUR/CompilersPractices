@@ -1,0 +1,93 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[https://www.overleaf.com/project/63761df255a8a9f4a15c3579
+	letterpaper, % Paper size, specify a4paper (A4) or letterpaper (US letter)
+	10pt, % Default font size, specify 10pt, 11pt or 12pt
+]{CSUniSchoolLabReport}
+
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\renewcommand\ULthickness{1.0pt}   %%---> For changing thickness of underline
+\setlength\ULdepth{1.3ex}%\maxdimen ---> For changing depth of underline
+
+%----------------------------------------------------------------------------------------
+%	REPORT INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+
+\begin{figure}[H] % [H] forces the figure to be placed exactly where it appears in the text
+	\centering % Horizontally center the figure
+	\includegraphics[width=0.4\textwidth]{images/logo.png} % Include the figure
+\end{figure}
+
+\begin{center}
+    \begin{tabular} {c}
+        \Huge Universidad La Salle \\\\\\\\
+        \huge Compiladores \\\\\\\\
+        \LARGE Informe de la Práctica 08 \\\\\\\\
+        \huge Diseño de Gramática BNF \\\\\\\\
+        \LARGE Karlo Emigdio Pacha Curimayhua \\\\\\\\
+        \LARGE Sexto Semestre - Ingeniería de Software \\\\\\\\
+        \LARGE 2023
+      \end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{l r}
+	\end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	Ejercicio 1
+%----------------------------------------------------------------------------------------
+
+\section*{Ejercicio 1 }
+
+\subsection*{Enunciado}
+Diseñe la gramática del lenguaje de programación propuesto. Puede basarse de ejemplos que hay internet.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Solución}
+
+\lstinputlisting[language=texto]{codes/grammarBNF.txt}
+
+%----------------------------------------------------------------------------------------
+\\
+\\
+\\
+\href{https://github.com/DAOBLUR/CompilersPractices/tree/main/8}{\huge\faGithub \textbf{{Repositorio GitHub}} }
+
+
+\end{document}

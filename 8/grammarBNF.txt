@@ -1,0 +1,44 @@
+<Program>                 ::= <MainFunction> | <MainFunction> <FunctionDeclaration>
+                              | <FunctionDeclaration> <MainFunction>
+                              | <FunctionDeclaration> <MainFunction> <FunctionDeclaration>
+                              | <EOF>
+<MainFunction>            ::= func main ( ) { <Statements> }
+<FunctionDeclaration>     ::= func <FunctionName> ( <Parameters>|<EOF> ) { <Statements> } 
+                              | func <FunctionName> ( <Parameters>|<EOF> ) { <Statements> } <FunctionDeclaration>
+<FunctionName>            ::= <Identifier>
+<Parameters>              ::= <Identifier> | <Identifier> , <Parameters>    
+<Statements>              ::= <Statement> | <Statement> <Statements>
+<Statement>               ::= <VariableDeclaration> | <Assignment> | <Conditional> | <Loop> | <FunctionCall> | <ReturnStatement> | <Comment> | <EOF>
+<VariableDeclaration>     ::= var <Identifier> = <Expressions>
+<Assignment>              ::= <Identifier> = <Expressions>
+<Expressions>             ::= ( <Expression> ) | <Expression>
+<Expression>              ::= <Value> | <Identifier> | <ArithExpression> | <ComparisonExpression> | <FunctionCall>
+<ArithExpression>         ::= <Expressions> <ArithOperator> <Expressions>
+<ComparisonExpression>    ::= <Expressions> <ComparisonOperator> <Expressions>
+<FunctionCall>            ::= <FunctionName> ( <SentParameters>|<EOF> )
+<SentParameters>          ::= <Expressions> | <Expressions> , <SentParameters>
+<Conditional>             ::= if <Condition> { <Statements> } <ElseIf>|<EOF>
+<ElseIf>                  ::= <Else> | <Elif> <Else>
+<Elif>                    ::= elif <Condition> { <Statements> }
+                              | elif <Condition> { <Statements> } <Elif>
+<Else>                    ::= else { <Statements> }
+<Loop>                    ::= <While> | <For>
+<While>                   ::= while <Condition> { <Statements> }
+<For>                     ::= for <Expressions> , <Expressions> { <Statements> }
+                              | for <Expressions>, <Expressions>, <Expressions> { <Statements> }
+<Condition>               ::= <Expressions> | <Expressions> <LogicalOperator> <Expressions>
+<ReturnStatement>         ::= return <Expressions>
+<Comment>                 ::= // <Text> | /* <MultipleText> */
+<MultipleText>            ::= <Text> | <Text> \n <MultipleText>
+<Text>                    ::= <Value> | <Value> <Text>
+<ArithOperator>           ::= + | - | * | /
+<ComparisonOperator>      ::= < | > | == | <= | >= | != 
+<LogicalOperator>         ::= & | "|"
+<Value>                   ::= <Strings> | <Number> | <Boolean> | null
+<Strings>                  ::= " <String> " | ' <String> '
+<String>                  ::= <Char> | <Char> <String>
+<Number>                  ::= <Int> | <Int>.<Int>
+<Boolean>                 ::= true | false
+<Identifier>              ::= <Letter> | <Letter> <ID> <Identifier>
+<ID>                      ::= <Letter> | <Int> | _ | <EOF>
+<EOF>                     ::= <None> | <End>

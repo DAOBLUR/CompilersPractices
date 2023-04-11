@@ -36,3 +36,7 @@ def CreateAutomata(name):
   for transition in transitions: g.edge(transition[0], transition[1], label=transition[2])
 
   g.render(name, format='png', view=True)  
+
+
+
+  
