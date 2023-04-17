@@ -1,0 +1,197 @@
+<Program> 
+<FunctionDeclaration> <MainFunction>
+
+<FunctionDeclaration> 
+func <FunctionName> ( <Parameters ) { <Statements }
+func <Identifier> ( <Identifier> ) { <Statement> }
+
+func Id ( Id ) {
+    <Expressions>
+}
+
+func Id ( Id ) {
+    <Expression>
+}
+
+func Id ( Id ) {
+    <ReturnStatement>
+}
+
+func Id ( Id ) {
+    return <Expressions>
+}
+
+func Id ( Id ) {
+    return <ArithExpression>
+}
+
+func Id ( Id ) {
+    return <Expressions> <ArithOperator> <Expressions>
+}
+
+func Id ( Id ) {
+    return <Identifier> + <Value>
+}
+
+func Id ( Id ) {
+    return Id + <Number>
+}
+
+func Id ( Id ) {
+    return Id + int
+}
+
+____________________________________________________________
+
+<MainFunction>
+func main ( ) { <Statements> }
+func main ( ) { <Statement> <Statement> }
+func main ( ) { <VariableDeclaration> <Conditional> }
+
+func main ( ) { 
+    <VariableDeclaration> 
+    <Conditional> 
+}
+
+func main ( ) { 
+    var <Identifier> = <Expressions> 
+    if <Condition> { <Statements> } <ElseIf>
+}
+
+func main ( ) { 
+    var id = <Expression> 
+    if <Expressions> { 
+        <Statements> 
+    }
+    <Else>
+}
+
+func main ( ) { 
+    var id = <FunctionCall> 
+    if <Expression> { 
+        <Statement> 
+    }
+    else {
+        <Statements>
+    }
+}
+
+func main ( ) { 
+    var id = <FunctionName> ( <SentParameters> )
+    if <ComparisonExpression> { 
+        <Expressions> 
+    }
+    else {
+        <Statement>
+    }
+}
+
+func main ( ) { 
+    var id = <Identifier> ( <Expressions> )
+    if <ComparisonExpression> { 
+        <FunctionCall> 
+    }
+    else {
+        <Expressions>
+    }
+}
+
+func main ( ) { 
+    var id = id ( <Expression> )
+    if <Expressions> <ComparisonOperator> <Expressions> { 
+        <FunctionName> ( <SentParameters> )
+    }
+    else {
+        <Expression>
+    }
+}
+
+func main ( ) { 
+    var id = id ( <Value> )
+    if <Expression> > <Expression> { 
+        <Identifier> ( <Expressions> )
+    }
+    else {
+        <FunctionCall>
+    }
+}
+
+func main ( ) { 
+    var id = id ( <Number> )
+    if <Identifier> > <Value> { 
+        id ( <Expression> )
+    }
+    else {
+        <FunctionName> ( <SentParameters> )
+    }
+}
+
+func main ( ) { 
+    var id = id ( int )
+    if id > <Number> { 
+        id ( <Value> )
+    }
+    else {
+        <Identifier> ( <Expressions> )
+    }
+}
+
+func main ( ) { 
+    var id = id ( int )
+    if id > int { 
+        id ( <Strings> )
+    }
+    else {
+        id ( <Expression> )
+    }
+}
+
+func main ( ) { 
+    var id = id ( int )
+    if id > int { 
+        id ( " <String> " )
+    }
+    else {
+        id ( <Value> )
+    }
+}
+
+func main ( ) { 
+    var id = id ( int )
+    if id > int { 
+        id ( " <Char> <String> " )
+    }
+    else {
+        id ( <Strings> )
+    }
+}
+
+func main ( ) { 
+    var id = id ( int )
+    if id > int { 
+        id ( " chars " )
+    }
+    else {
+        id ( " <String> " )
+    }
+}
+
+func main ( ) { 
+    var id = id ( int )
+    if id > int { 
+        id ( " chars " )
+    }
+    else {
+        id ( " <Char> <String> " )
+    }
+}
+
+func main ( ) { 
+    var id = id ( int )
+    if id > int { 
+        id ( " chars " )
+    }
+    else {
+        id ( " chars " )
+    }
+}
