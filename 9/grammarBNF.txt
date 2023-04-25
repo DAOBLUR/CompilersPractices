@@ -36,9 +36,9 @@
 <LogicalOperator>         ::= & | "|"
 <Value>                   ::= <Strings> | <Number> | <Boolean> | null
 <Strings>                  ::= " <String> " | ' <String> '
-<String>                  ::= <Char> | <Char> <String>
-<Number>                  ::= <Int> | <Int>.<Int>
+<String>                  ::= Char | Char <String>
+<Number>                  ::= int | int.int
 <Boolean>                 ::= true | false
 <Identifier>              ::= <Letter> | <Letter> <ID> <Identifier>
-<ID>                      ::= <Letter> | <Int> | _ | <EOF>
+<ID>                      ::= Id
 <EOF>                     ::= <None> | <End>
