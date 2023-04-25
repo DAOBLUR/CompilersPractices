@@ -1,0 +1,185 @@
+Tokens:  int*int$ TRUE
+Tokens:  (int+int)$ TRUE
+Tokens:  (int+int)*int$ FALSE
+
+-------------------------------------------------------------
+
+Stack:  E$
+Tokens:  int*int$
+indexLex:  0
+indexSym:  0
+token.lexeme:  int
+node.symbol:  E
+text:  T X
+text:  [ 'T', 'X' ]
+indexLex:  0
+indexSym:  2
+token.lexeme:  int
+node.symbol:  T
+text:  int Y
+text:  [ 'int', 'Y' ]
+indexLex:  1
+indexSym:  3
+token.lexeme:  *
+node.symbol:  Y
+text:  * T
+text:  [ '*', 'T' ]
+indexLex:  0
+indexSym:  2
+token.lexeme:  int
+node.symbol:  T
+text:  int Y
+text:  [ 'int', 'Y' ]
+indexLex:  5
+indexSym:  3
+token.lexeme:  $
+node.symbol:  Y
+text:  ε
+text:  [ 'ε' ]
+indexLex:  5
+indexSym:  1
+token.lexeme:  $
+node.symbol:  X
+text:  ε
+text:  [ 'ε' ]
+true
+
+Stack:  E$
+Tokens:  (int+int)$
+indexLex:  3
+indexSym:  0
+token.lexeme:  (
+node.symbol:  E
+text:  T X
+text:  [ 'T', 'X' ]
+indexLex:  3
+indexSym:  2
+token.lexeme:  (
+node.symbol:  T
+text:  ( E )
+text:  [ '(', 'E', ')' ]
+indexLex:  0
+indexSym:  0
+token.lexeme:  int
+node.symbol:  E
+text:  T X
+text:  [ 'T', 'X' ]
+indexLex:  0
+indexSym:  2
+token.lexeme:  int
+node.symbol:  T
+text:  int Y
+text:  [ 'int', 'Y' ]
+indexLex:  2
+indexSym:  3
+token.lexeme:  +
+node.symbol:  Y
+text:  ε
+text:  [ 'ε' ]
+indexLex:  2
+indexSym:  1
+token.lexeme:  +
+node.symbol:  X
+text:  + E
+text:  [ '+', 'E' ]
+indexLex:  0
+indexSym:  0
+token.lexeme:  int
+node.symbol:  E
+text:  T X
+text:  [ 'T', 'X' ]
+indexLex:  0
+indexSym:  2
+token.lexeme:  int
+node.symbol:  T
+text:  int Y
+text:  [ 'int', 'Y' ]
+indexLex:  4
+indexSym:  3
+token.lexeme:  )
+node.symbol:  Y
+text:  ε
+text:  [ 'ε' ]
+indexLex:  4
+indexSym:  1
+token.lexeme:  )
+node.symbol:  X
+text:  ε
+text:  [ 'ε' ]
+indexLex:  5
+indexSym:  1
+token.lexeme:  $
+node.symbol:  X
+text:  ε
+text:  [ 'ε' ]
+true
+
+Stack:  E$
+Tokens:  (int+int)*int$
+indexLex:  3
+indexSym:  0
+token.lexeme:  (
+node.symbol:  E
+text:  T X
+text:  [ 'T', 'X' ]
+indexLex:  3
+indexSym:  2
+token.lexeme:  (
+node.symbol:  T
+text:  ( E )
+text:  [ '(', 'E', ')' ]
+indexLex:  0
+indexSym:  0
+token.lexeme:  int
+node.symbol:  E
+text:  T X
+text:  [ 'T', 'X' ]
+indexLex:  0
+indexSym:  2
+token.lexeme:  int
+node.symbol:  T
+text:  int Y
+text:  [ 'int', 'Y' ]
+indexLex:  2
+indexSym:  3
+token.lexeme:  +
+node.symbol:  Y
+text:  ε
+text:  [ 'ε' ]
+indexLex:  2
+indexSym:  1
+token.lexeme:  +
+node.symbol:  X
+text:  + E
+text:  [ '+', 'E' ]
+indexLex:  0
+indexSym:  0
+token.lexeme:  int
+node.symbol:  E
+text:  T X
+text:  [ 'T', 'X' ]
+indexLex:  0
+indexSym:  2
+token.lexeme:  int
+node.symbol:  T
+text:  int Y
+text:  [ 'int', 'Y' ]
+indexLex:  4
+indexSym:  3
+token.lexeme:  )
+node.symbol:  Y
+text:  ε
+text:  [ 'ε' ]
+indexLex:  4
+indexSym:  1
+token.lexeme:  )
+node.symbol:  X
+text:  ε
+text:  [ 'ε' ]
+indexLex:  1
+indexSym:  1
+token.lexeme:  *
+node.symbol:  X
+text:
+text:  [ '' ]
+false
