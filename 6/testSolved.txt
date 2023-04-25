@@ -1,0 +1,61 @@
+KaT -> TY 
+$ ->				$
+We -> e
+sT
+
+--int*int
+Stack		Input			Action
+___________________________________________
+E$			int*int$		TX
+TX$			int*int$		intY
+intYX$		int*int$		term
+YX$			*int$			*T
+*TX$		*int$			term
+TX$			int$			intY
+intYX$		int$			term
+YX$			$				ε
+X$			$				ε
+$			$				term
+
+
+--(int+int)
+Stack		Input			Action
+___________________________________________
+E$			(int+int)$		TX
+TX$			(int+int)$		(E)
+(E)X$		(int+int)$		term
+E)X$		int+int)$		TX
+TX)X$		int+int)$		intY
+intYX)X$	int+int)$		term
+YX)$		+int)$			ε
+X)$			+int)$			+E
++E)$		+int)$			term
+E)$			int)$			TX
+TX)$		int)$			intY
+intYX)$		int)$			term
+YX)$		)$				ε
+X)$			)$				ε
+)$			)$				term
+$			$				term
+
+
+--(int+int)*int
+Stack		Input					Action
+____________________________________________
+E$			(int+int)*int$		TX
+TX$			(int+int)*int$		(E)
+(E)X$		(int+int)*int$		term
+E)X$		int+int)*int$		TX
+TX)X$		int+int)*int$		intY
+intYX)X$	int+int)*int$		term
+YX)X$		+int)*int$			ε
+X)X$		+int)*int$			+E
++E)X$		+int)*int$			term
+E)X$		int)*int$			TX
+TX)X$		int)*int$			intY
+intYX)X$	int)*int$			term
+YX)X$		)*int$				ε
+X)X$		)*int$				ε
+)X$			)*int$				term
+X$			*int$				error
+
