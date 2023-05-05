@@ -1,0 +1,98 @@
+Program -> FunctionDeclaration' MainFunction
+FunctionDeclaration -> func FunctionName ( Parameters ) { Statements } FunctionDeclaration'
+FunctionDeclaration' -> FunctionDeclaration
+FunctionDeclaration' -> ε
+MainFunction -> main ( ) { Statements }
+FunctionName -> id
+Parameters -> id Parameters'
+Parameters -> Parameters'
+Parameters' -> comma id Parameters'
+Parameters' -> ε
+Statements -> Statement Statements'
+Statements' -> Statement Statements'
+Statements' -> ε
+Statement -> VariableDeclaration End
+Statement -> Assignment End
+Statement -> Conditional
+Statement -> Loop
+Statement -> FunctionCall End
+Statement -> ReturnStatement End
+Statement -> Comment
+VariableDeclaration -> var id = Expressions 
+Assignment -> id = Expressions
+
+Expressions -> Terms Expressions'
+Expressions' -> ArithOperator Terms Expressions'
+Expressions' -> ComparisonOperator Terms Expressions'
+Expressions' -> ε
+Terms -> Expression' Factor
+Factor -> ArithOperator' Expression' Factor
+Factor -> ε
+Expression' -> ( Expressions )
+
+Expression' -> Value 
+Expression' -> id
+Expression' -> FunctionCall
+
+FunctionCall -> exec FunctionName ( SentParameters )
+
+SentParameters -> Expressions SentParameters'
+SentParameters ->  ε
+SentParameters' -> comma Expressions SentParameters'
+SentParameters' -> ε
+
+Conditional -> if Condition { Statements } Conditional'
+Conditional' -> ElseIf
+Conditional' -> ε
+
+ElseIf -> Else
+ElseIf -> Elif Else
+
+Elif -> elif Condition { Statements } Elif'
+Elif' -> Elif
+Elif' -> ε
+Else -> else { Statements }
+
+Loop -> While
+Loop -> For
+While -> while Condition { Statements }
+
+For -> for Expressions comma Expressions For'
+For' -> comma Expressions { Statements }
+For' -> { Statements }
+
+Condition -> Expressions Condition'
+Condition' -> LogicalOperator Condition
+Condition' -> ε
+
+ReturnStatement -> return Expressions 
+Comment -> // text
+Comment -> /* MultipleText */
+
+MultipleText -> text MultipleText'
+MultipleText' -> jump MultipleText
+MultipleText' -> ε
+
+ArithOperator -> +
+ArithOperator -> -
+ArithOperator' -> *
+ArithOperator' -> /
+ComparisonOperator -> <
+ComparisonOperator -> >
+ComparisonOperator -> ==
+ComparisonOperator -> <=
+ComparisonOperator -> >=
+ComparisonOperator -> !=
+LogicalOperator -> &
+LogicalOperator -> |
+Value -> string
+Value -> Number
+Value -> Boolean
+Value -> null
+Number -> int
+Number -> float
+Boolean -> true
+Boolean -> false
+End -> comma Jump
+Jump -> jump Jump
+Jump -> ε
