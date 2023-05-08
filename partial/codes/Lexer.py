@@ -76,8 +76,11 @@ def t_id(t):
   t.type = reserved.get(t.value, 'id')
   return t
 
+def t_newline(t):
+  r'\n'
+  t.lexer.lineno += 1
 
-t_ignore = '\t\n '
+t_ignore = '\t '
 
 
 def t_error(t):

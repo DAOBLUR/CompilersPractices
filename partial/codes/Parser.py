@@ -54,7 +54,7 @@ def PrintTokens(Tokens):
 
 def Error(Stack, Tokens):
   if (len(Stack) > 1):
-    return 'Expected: ' + f'{Stack[0].symbol} in [{Tokens[0].line},{Tokens[0].pos-1}]'
+    return 'Expected: ' + f'{Stack[0].symbol} in [{Tokens[0].line-1},{Tokens[0].pos-1}]'
   else:
     return 'Not expected: ' + f'{Tokens[0].lexeme} : "{Tokens[0].symbol}" in [{Tokens[0].line},{Tokens[0].pos}]'
 
