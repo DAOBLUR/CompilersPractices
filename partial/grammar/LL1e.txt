@@ -1,0 +1,105 @@
+Program -> FunctionDeclaration' MainFunction
+
+FunctionDeclaration' -> FunctionDeclaration
+FunctionDeclaration' -> ''
+FunctionDeclaration -> func FunctionName lparen Parameters rparen lkey Statements rkey FunctionDeclaration'
+
+MainFunction -> main lparen rparen lkey Statements rkey
+
+FunctionName -> id
+
+Parameters -> id Parameters'
+Parameters -> Parameters'
+Parameters' -> comma id Parameters'
+Parameters' -> ''
+
+Statements -> Statement Statements'
+Statements' -> Statement Statements'
+Statements' -> ''
+Statement -> VariableDeclaration comma
+Statement -> Assignment comma
+Statement -> Conditional
+Statement -> Loop
+Statement -> FunctionCall comma
+Statement -> ReturnStatement comma
+Statement -> Comment
+Statement -> Print comma
+
+Print -> print lparen SentParameters rparen 
+VariableDeclaration -> var id equal Expressions 
+Assignment -> id equal Expressions
+
+Expressions -> Terms Expressions'
+Expressions' -> ArithOperator Terms Expressions'
+Expressions' -> ComparisonOperator Terms Expressions'
+Expressions' -> ''
+
+Terms -> Expression' Factor
+Factor -> ArithOperator' Expression' Factor
+Factor -> ''
+
+Expression' -> lparen Expressions rparen
+Expression' -> Value 
+Expression' -> id
+Expression' -> FunctionCall
+Expression' -> read lparen rparen
+
+FunctionCall -> exec FunctionName lparen SentParameters rparen
+
+SentParameters -> Expressions SentParameters'
+SentParameters ->  ''
+SentParameters' -> comma Expressions SentParameters'
+SentParameters' -> ''
+
+Conditional -> if Condition lkey Statements' rkey Conditional'
+Conditional' -> ElseIf
+Conditional' -> ''
+
+ElseIf -> Else
+ElseIf -> Elif Else
+
+Elif -> elif Condition lkey Statements' rkey Elif'
+Elif' -> Elif
+Elif' -> ''
+Else -> else lkey Statements' rkey
+
+Loop -> While
+Loop -> For
+While -> while Condition lkey Statements' rkey
+
+For -> for Expressions comma Expressions For'
+For' -> comma Expressions lkey Statements' rkey
+For' -> lkey Statements' rkey
+
+Condition -> Expressions Condition'
+Condition' -> LogicalOperator Condition
+Condition' -> ''
+
+ReturnStatement -> return Expressions 
+Comment -> comment
+Comment -> multicomment
+
+ArithOperator -> plus
+ArithOperator -> minus
+ArithOperator' -> times
+ArithOperator' -> divide
+
+ComparisonOperator -> less
+ComparisonOperator -> greater
+ComparisonOperator -> equalequal
+ComparisonOperator -> lessequal
+ComparisonOperator -> greaterequal
+ComparisonOperator -> diferent
+
+LogicalOperator -> and
+LogicalOperator -> or
+
+Value -> string
+Value -> Number
+Value -> Boolean
+Value -> null
+
+Number -> int
+Number -> float
+Boolean -> true
+Boolean -> false

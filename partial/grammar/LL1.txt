@@ -1,23 +1,31 @@
 Program -> FunctionDeclaration' MainFunction
-FunctionDeclaration -> func FunctionName ( Parameters ) { Statements } FunctionDeclaration'
+
 FunctionDeclaration' -> FunctionDeclaration
 FunctionDeclaration' -> ''
+FunctionDeclaration -> func FunctionName ( Parameters ) { Statements } FunctionDeclaration'
+
 MainFunction -> main ( ) { Statements }
+
 FunctionName -> id
+
 Parameters -> id Parameters'
 Parameters -> Parameters'
-Parameters' -> comma id Parameters'
+Parameters' -> , id Parameters'
 Parameters' -> ''
+
 Statements -> Statement Statements'
 Statements' -> Statement Statements'
 Statements' -> ''
-Statement -> VariableDeclaration End
-Statement -> Assignment End
+Statement -> VariableDeclaration ,
+Statement -> Assignment ,
 Statement -> Conditional
 Statement -> Loop
-Statement -> FunctionCall End
-Statement -> ReturnStatement End
+Statement -> FunctionCall ,
+Statement -> ReturnStatement ,
 Statement -> Comment
+Statement -> Print ,
+
+Print -> print ( SentParameters ) 
 VariableDeclaration -> var id = Expressions 
 Assignment -> id = Expressions
 
@@ -25,74 +33,73 @@ Expressions -> Terms Expressions'
 Expressions' -> ArithOperator Terms Expressions'
 Expressions' -> ComparisonOperator Terms Expressions'
 Expressions' -> ''
+
 Terms -> Expression' Factor
 Factor -> ArithOperator' Expression' Factor
 Factor -> ''
-Expression' -> ( Expressions )
 
+Expression' -> ( Expressions )
 Expression' -> Value 
 Expression' -> id
 Expression' -> FunctionCall
+Expression' -> read ( )
 
 FunctionCall -> exec FunctionName ( SentParameters )
 
 SentParameters -> Expressions SentParameters'
 SentParameters ->  ''
-SentParameters' -> comma Expressions SentParameters'
+SentParameters' -> , Expressions SentParameters'
 SentParameters' -> ''
 
-Conditional -> if Condition { Statements } Conditional'
+Conditional -> if Condition { Statements' } Conditional'
 Conditional' -> ElseIf
 Conditional' -> ''
 
 ElseIf -> Else
 ElseIf -> Elif Else
 
-Elif -> elif Condition { Statements } Elif'
+Elif -> elif Condition { Statements' } Elif'
 Elif' -> Elif
 Elif' -> ''
-Else -> else { Statements }
+Else -> else { Statements' }
 
 Loop -> While
 Loop -> For
-While -> while Condition { Statements }
+While -> while Condition { Statements' }
 
-For -> for Expressions comma Expressions For'
-For' -> comma Expressions { Statements }
-For' -> { Statements }
+For -> for Expressions , Expressions For'
+For' -> , Expressions { Statements' }
+For' -> { Statements' }
 
 Condition -> Expressions Condition'
 Condition' -> LogicalOperator Condition
 Condition' -> ''
 
 ReturnStatement -> return Expressions 
-Comment -> // text
-Comment -> /* MultipleText */
-
-MultipleText -> text MultipleText'
-MultipleText' -> jump MultipleText
-MultipleText' -> ''
+Comment -> comment
+Comment -> multicomment
 
 ArithOperator -> +
 ArithOperator -> -
 ArithOperator' -> *
 ArithOperator' -> /
+
 ComparisonOperator -> <
 ComparisonOperator -> >
 ComparisonOperator -> ==
 ComparisonOperator -> <=
 ComparisonOperator -> >=
 ComparisonOperator -> !=
+
 LogicalOperator -> &
 LogicalOperator -> |
+
 Value -> string
 Value -> Number
 Value -> Boolean
 Value -> null
+
 Number -> int
 Number -> float
 Boolean -> true
 Boolean -> false
-End -> comma Jump
-Jump -> jump Jump
-Jump -> ''

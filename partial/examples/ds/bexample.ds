@@ -1,0 +1,26 @@
+func Square (a) {
+  return a*a
+}
+
+main() {
+  var a = 0,
+  var f = false,
+
+  if a < b & c = null {
+    for 0, b ,1 {
+      a = a + 1,
+    } 
+  }   
+  elif a = b | f = false {
+    for i , 2*b {
+      a = a + 1,
+    }
+  }
+  else {
+    while a > b {
+      a = a - 1,
+    }
+  }
+
+  exec Square(a),
+}

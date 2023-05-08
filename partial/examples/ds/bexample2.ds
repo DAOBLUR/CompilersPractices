@@ -1,0 +1,33 @@
+// esto es un comentario de una linea
+
+main () {
+  print(1),
+  var a = read(),
+  var MiIdentificador = 10,
+  var mi_segundo_identificador = 20,
+  var a = true,
+  if a {
+    for 0 {
+      print(i),
+    }
+  }
+
+  if a == false {
+  }
+
+  if b < 11 {
+    var entero = 123,
+  }
+
+  if a != false {
+    var flotante = 1.23,
+  }
+
+  /* comentario multilinea
+  mas lineas del comentario */
+
+  var booleano = true,
+  var nulo = null,
+
+  return 0
+}

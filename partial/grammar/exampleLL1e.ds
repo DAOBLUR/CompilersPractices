@@ -1,0 +1,30 @@
+func id lparen id rparen lkey 
+    comment
+    while id plus lparen null rparen lkey 
+        return exec id lparen lparen int rparen rparen comma 
+    rkey 
+rkey 
+
+func id lparen rparen lkey 
+    for id plus lparen int rparen comma id less int comma true lkey 
+        var id equal int comma 
+        print lparen id comma int comma lparen string rparen rparen comma 
+    rkey 
+rkey
+
+func id lparen rparen lkey 
+    if int less id lkey 
+        var id equal int comma 
+        var id equal read lparen rparen comma 
+    rkey 
+rkey
+
+func id lparen rparen lkey 
+    var id equal lparen exec id lparen exec id lparen int times id rparen rparen rparen plus id comma 
+rkey 
+
+main lparen rparen lkey 
+    var id equal lparen id diferent int rparen plus read lparen rparen plus read lparen rparen comma 
+rkey
+
+func id lparen id rparen lkey comment while id plus lparen null rparen lkey return exec id lparen lparen int rparen rparen comma rkey rkey func id lparen rparen lkey for id plus lparen int rparen comma id less int comma true lkey var id equal int comma print lparen id comma int comma lparen string rparen rparen comma rkey rkey func id lparen rparen lkey if int less id lkey var id equal int comma var id equal read lparen rparen comma rkey rkey func id lparen rparen lkey var id equal lparen exec id lparen exec id lparen int times id rparen rparen rparen plus id comma rkey main lparen rparen lkey var id equal lparen id diferent int rparen plus read lparen rparen plus read lparen rparen comma rkey

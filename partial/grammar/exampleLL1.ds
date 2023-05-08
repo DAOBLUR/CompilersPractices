@@ -1,0 +1,30 @@
+func id ( id ) { 
+    comment
+    while id + ( null ) { 
+        return exec id ( ( int ) ) , 
+    } 
+} 
+
+func id ( ) { 
+    for id + ( int ) , id < int , true { 
+        var id = int , 
+        print ( id , int , ( string ) ) , 
+    } 
+}
+
+func id ( ) { 
+    if int < id { 
+        var id = int , 
+        var id = read ( ) , 
+    } 
+}
+
+func id ( ) { 
+    var id = ( exec id ( exec id ( int * id ) ) ) + id , 
+} 
+
+main ( ) { 
+    var id = ( id != int ) + read ( ) + read ( ) , 
+}
+
+func id ( id ) { comment while id + ( null ) { return exec id ( ( int ) ) , } } func id ( ) { for id + ( int ) , id < int , true { var id = int , print ( id , int , ( string ) ) , } } func id ( ) { if int < id { var id = int , var id = read ( ) , } } func id ( ) { var id = ( exec id ( exec id ( int * id ) ) ) + id , } main ( ) { var id = ( id != int ) + read ( ) + read ( ) , }
